@@ -1,0 +1,74 @@
+/* Emacs settings: -*- mode: Fundamental; tab-width: 4; -*-
+
+////////////////////////////////////////////////////////////////////////////
+//																		  //
+// All web sites: stylesheet various single-column DIVs,                  //
+// and by import the top-level site-specific background design            //
+//																		  //
+////////////////////////////////////////////////////////////////////////////
+
+The imported topLevel.css provides site-specific graphic design, like
+the tartan stripe on birrell.org.
+
+The classes defined here provide common layout for simple single-column
+pages: "contents", "plain", and "result".  The styles will be centered
+if they have limited width (like "contents").
+
+    contents: fixed maximum width, transparent background
+
+    plain: inherited background, inset border
+
+    result: white background, monospace font, "pre" layout
+
+It's often useful to combine "contents", "plain", and "result" in a
+variety of ways, for example:
+
+    "contents plain": fixed max-width, plain background, inset border
+
+    "plain result": white monospace pre in an inset border
+
+    "result plain": inherited background, monospace pre, inset border
+
+    "contents result": fixed max-width white monospace pre
+
+    "contents plain result": fixed max-width white monospace pre, inset border
+
+There's also "title" with centered large text, and "help" with smaller text.
+
+*/
+
+@import url("topLevel.css");
+
+.contents, .plain, .result {
+	margin-left: auto;
+	margin-right: auto;
+}
+.contents {
+	max-width: 36em;
+}
+.plain {
+	background-color: inherit;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border: 1px #cccccc inset;
+	padding: 1em;
+}
+.result {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #ffffff;
+    font-family: monospace;
+    white-space: pre;
+}
+.title {
+    margin-top: 0.75em;
+	margin-bottom: 0.75em;
+	font-size: 1.33em;
+	text-align: center;
+}
+.title img {
+	vertical-align: bottom;
+}
+.help {
+	font-size: 0.75em;
+}

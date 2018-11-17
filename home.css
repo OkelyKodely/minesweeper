@@ -1,0 +1,68 @@
+/* Emacs settings: -*- mode: Fundamental; tab-width: 4; -*-
+
+////////////////////////////////////////////////////////////////////////////
+//																		  //
+//	Andrew's Home Page: stylesheet                                        //
+//																		  //
+////////////////////////////////////////////////////////////////////////////
+
+*/
+
+@import url("centeredPane.css");
+
+body {
+	margin-top: 0px;
+	margin-left: 1em;
+	margin-right: 1em;
+	background-image: url(grayNoise.jpg);
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+.title {
+	font-style: italic;
+}
+.title img {
+	height: 28px;
+}
+.decoration {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	text-align: center;
+}
+.contents img.decoration {
+	display: block;
+	width: 100%;
+}
+.decoration + .contents	{
+	/* restrict the .contents width when using short decorative bars */
+	max-width: 504px;
+}
+.goHomeLink {
+	display: block;
+	float: right;
+	font-style: italic;
+}
+table.links {
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 0px;
+	padding: 0px;
+	font-style: italic;
+}
+.linkLeft, .linkRight, .links {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+td.links {
+	text-align: center;
+}
+td.linkBars {
+	width: 2px;
+	padding: 0px;
+	background-color: #666666;
+}

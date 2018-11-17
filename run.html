@@ -1,0 +1,229 @@
+<html>
+<head>
+<SCRIPT TYPE="text/javascript" SRC="minesweeper.js"></SCRIPT>
+<LINK HREF="minesweeper.css" REL=stylesheet>
+<style type="text/css">
+#sqTable {
+	margin-left: 1em;
+}
+</style>
+</head>
+<body onload="init(8, 64, 10)">
+<TABLE align="center" ID=sqTable onmouseup="return false">
+<TR><TD CLASS=score COLSPAN=8>
+<DIV CLASS=counter ID=mines>&nbsp;</DIV>
+<DIV CLASS=counter ID=timer>&nbsp;</DIV>
+<IMG ID=smiley SRC="erasing.gif" ALT=""
+	onmousedown="return clickSmiley(event)">
+</TD></TR>
+<TR>
+<TD CLASS=sq ID="sq-0"
+  onmousedown="return clickSq(event,0)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-1"
+  onmousedown="return clickSq(event,1)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-2"
+  onmousedown="return clickSq(event,2)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-3"
+  onmousedown="return clickSq(event,3)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-4"
+  onmousedown="return clickSq(event,4)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-5"
+  onmousedown="return clickSq(event,5)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-6"
+  onmousedown="return clickSq(event,6)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-7"
+  onmousedown="return clickSq(event,7)"
+  >&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS=sq ID="sq-8"
+  onmousedown="return clickSq(event,8)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-9"
+  onmousedown="return clickSq(event,9)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-10"
+  onmousedown="return clickSq(event,10)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-11"
+  onmousedown="return clickSq(event,11)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-12"
+  onmousedown="return clickSq(event,12)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-13"
+  onmousedown="return clickSq(event,13)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-14"
+  onmousedown="return clickSq(event,14)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-15"
+  onmousedown="return clickSq(event,15)"
+  >&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS=sq ID="sq-16"
+  onmousedown="return clickSq(event,16)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-17"
+  onmousedown="return clickSq(event,17)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-18"
+  onmousedown="return clickSq(event,18)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-19"
+  onmousedown="return clickSq(event,19)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-20"
+  onmousedown="return clickSq(event,20)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-21"
+  onmousedown="return clickSq(event,21)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-22"
+  onmousedown="return clickSq(event,22)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-23"
+  onmousedown="return clickSq(event,23)"
+  >&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS=sq ID="sq-24"
+  onmousedown="return clickSq(event,24)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-25"
+  onmousedown="return clickSq(event,25)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-26"
+  onmousedown="return clickSq(event,26)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-27"
+  onmousedown="return clickSq(event,27)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-28"
+  onmousedown="return clickSq(event,28)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-29"
+  onmousedown="return clickSq(event,29)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-30"
+  onmousedown="return clickSq(event,30)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-31"
+  onmousedown="return clickSq(event,31)"
+  >&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS=sq ID="sq-32"
+  onmousedown="return clickSq(event,32)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-33"
+  onmousedown="return clickSq(event,33)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-34"
+  onmousedown="return clickSq(event,34)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-35"
+  onmousedown="return clickSq(event,35)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-36"
+  onmousedown="return clickSq(event,36)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-37"
+  onmousedown="return clickSq(event,37)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-38"
+  onmousedown="return clickSq(event,38)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-39"
+  onmousedown="return clickSq(event,39)"
+  >&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS=sq ID="sq-40"
+  onmousedown="return clickSq(event,40)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-41"
+  onmousedown="return clickSq(event,41)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-42"
+  onmousedown="return clickSq(event,42)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-43"
+  onmousedown="return clickSq(event,43)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-44"
+  onmousedown="return clickSq(event,44)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-45"
+  onmousedown="return clickSq(event,45)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-46"
+  onmousedown="return clickSq(event,46)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-47"
+  onmousedown="return clickSq(event,47)"
+  >&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS=sq ID="sq-48"
+  onmousedown="return clickSq(event,48)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-49"
+  onmousedown="return clickSq(event,49)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-50"
+  onmousedown="return clickSq(event,50)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-51"
+  onmousedown="return clickSq(event,51)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-52"
+  onmousedown="return clickSq(event,52)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-53"
+  onmousedown="return clickSq(event,53)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-54"
+  onmousedown="return clickSq(event,54)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-55"
+  onmousedown="return clickSq(event,55)"
+  >&nbsp;</TD>
+</TR>
+<TR>
+<TD CLASS=sq ID="sq-56"
+  onmousedown="return clickSq(event,56)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-57"
+  onmousedown="return clickSq(event,57)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-58"
+  onmousedown="return clickSq(event,58)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-59"
+  onmousedown="return clickSq(event,59)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-60"
+  onmousedown="return clickSq(event,60)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-61"
+  onmousedown="return clickSq(event,61)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-62"
+  onmousedown="return clickSq(event,62)"
+  >&nbsp;</TD>
+<TD CLASS=sq ID="sq-63"
+  onmousedown="return clickSq(event,63)"
+  >&nbsp;</TD>
+</TR>
+</TABLE>
+</body>
+</html>

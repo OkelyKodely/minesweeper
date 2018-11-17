@@ -1,0 +1,123 @@
+/* Emacs settings: -*- mode: Fundamental; tab-width: 4; -*-
+
+////////////////////////////////////////////////////////////////////////////
+//                                                                        //
+// Minesweeper: stylesheet                                                //
+//                                                                        //
+// Copyright 1998-2016, Andrew D. Birrell                                 //
+//                                                                        //
+////////////////////////////////////////////////////////////////////////////
+
+*/
+
+@import url("home.css");
+
+body {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	background-color: #666666;
+	background-image: none;
+	color: #ffffff;
+}
+a:link		{ color: #ccccff }
+a:active	{ color: #993333 }
+a:visited	{ color: #ccccff }
+a:hover		{ color: #ffff00 }
+.main {
+	display: inline-block;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	text-align: left;
+}
+.limited {
+	max-width: 36em;
+}
+#sqTable {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-spacing: 0px;
+	background-color: #666666;
+	color: #000000;
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-webkit-user-select: none;
+}
+.sq, .score {
+	margin: 0px;
+	border: 2px solid;
+	border-color: #eeeeee #999999 #999999 #eeeeee;
+	background-color: #cccccc;
+	padding: 0px;
+	vertical-align: middle;
+	text-align: center;
+}
+.sq {
+	box-sizing: border-box; /* avoids jumpiness when zoomed */
+	width: 24px;
+	max-width: 24px; /* avoids being resized if text is too long (iOS) */
+	min-width: 24px;
+	height: 24px;
+	min-height: 24px;
+	max-height: 24px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 18px;
+	cursor: pointer;
+}
+.sqExposed {
+	background-color: #bbbbbb;
+	border-width: 1px;
+	border-color: #999999;
+	padding: 1px;
+	cursor: default;
+}
+.sqExploded, .sqIncorrect {
+	color: #ff0000;
+}
+.sq1 {
+	color: #3333cc;
+}
+.sq2 {
+	color: #006600;
+}
+.sq3 {
+	color: #cc0000;
+}
+.sq4 {
+	color: #660066;
+}
+.sq5 {
+	color: #006666;
+}
+/* sq0, sq6, sq7, and sq8 use basic black */
+div.counter {
+	margin: 10px;
+	border: 1px inset #eeeeee;
+	padding-right: 3px;
+	width: 1.75em;
+	background-color: #000000;
+	color: #ff6666;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1;
+	text-align: right;
+}
+#mines {
+	float: left;
+}
+#timer {
+	float: right;
+}
+#smiley {
+	width: 24px;
+	height: 24px;
+	margin: 2px;
+	border: 3px groove #eeeeee;
+	padding: 6px;
+	vertical-align: middle;
+	cursor: pointer;
+}
