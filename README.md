@@ -1,0 +1,2 @@
+# minesweeper
+Javascript-written minesweeper.
